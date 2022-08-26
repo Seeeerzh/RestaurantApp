@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:restaurant_management_app/constants/const.dart';
 import 'package:pluto_grid/pluto_grid.dart';
@@ -13,6 +15,9 @@ class Mainpage extends StatefulWidget {
 
 class _MainpageState extends State<Mainpage> {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
+  
+
+   
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +30,9 @@ class _MainpageState extends State<Mainpage> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         title: Center(child: Text(Const.Maintext, style:Const.MainStyle,),),
+        
         actions: [IconButton(onPressed:(){_scaffoldKey.currentState!.openEndDrawer();}, icon: Icon(Icons.assessment)),],
+        
            ),
           body: ListView(
             scrollDirection: Axis.vertical,
@@ -60,6 +67,7 @@ class _MainpageState extends State<Mainpage> {
               Padding(padding: EdgeInsets.fromLTRB(50, 0, 0, 10) ),
               Text(Const.Maintext2, style:Const.MainStyle2, )]
           ),
+          
             
 
           DataTable(
@@ -90,10 +98,24 @@ class _MainpageState extends State<Mainpage> {
                 ]),
                  ],
               ),
-            
+              
+            RaisedButton(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    onPressed: () {
+                      FirebaseAuth.instance.signOut();
+                    },
+                    child: Text("Log Out",
+                        style: TextStyle(
+                            fontSize: 14,
+                            letterSpacing: 2.2,
+                            color: Colors.black)),
+                  ),
             
           ],
+          
         ),
+        
       );
   }
   

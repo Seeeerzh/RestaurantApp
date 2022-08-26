@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "937964130053",
+    "project_id": "fir-e0a63",
+    "storage_bucket": "fir-e0a63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937964130053:android:71f8f3996f5e189cfd716c",
+        "android_client_info": {
+          "package_name": "com.example.restaurant_management_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "937964130053-pk1o9rr3h97vl84vbibk7etbh5588nn8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1qX0Vcjn-q3xzMLvwMS_GMgkgU3FzELw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "937964130053-pk1o9rr3h97vl84vbibk7etbh5588nn8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:restaurant_management_app/Mypages/table%20statuses/tablestatus1.dart';
+
 import 'package:restaurant_management_app/widgets/cart_product.dart';
 import 'package:restaurant_management_app/widgets/cart_total.dart';
 

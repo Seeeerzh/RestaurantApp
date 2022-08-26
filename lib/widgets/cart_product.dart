@@ -24,6 +24,7 @@ class CartProducts extends StatelessWidget {
               product: controller.products.keys.toList()[index],
               quantity: controller.products.values.toList()[index],
               index: index,
+          
             );
           }),
     
@@ -52,9 +53,9 @@ class CartProductCard extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          CircleAvatar(radius: 40, backgroundImage: NetworkImage (product.imageUrl,),),
+          CircleAvatar(radius: 40, backgroundImage: NetworkImage (product.imageUrl!,),),
           SizedBox(width: 20,),
-          Expanded(child: Text(product.name)),
+          Expanded(child: Text(product.name!)),
           IconButton(onPressed: (){
             controller.removeProduct(product);
           }, icon: Icon(Icons.remove_circle),),

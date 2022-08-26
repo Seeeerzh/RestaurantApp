@@ -1,24 +1,31 @@
-
+import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:restaurant_management_app/Mypages/healthy%20menu/DetailPage1.dart';
+import 'package:restaurant_management_app/Mypages/mexican%20menu/Detailpage22.dart';
 
 import 'AsianMenu.dart';
-import 'MexicanMenu.dart';
+import 'Italian menu/DetailPage11.dart';
+import 'Italian menu/DetailPage12.dart';
+import 'Italian menu/Detailpage10.dart';
+import 'ItalianMenu.dart';
+import 'Menu.dart';
 import 'healthy menu/DetailPage.dart';
 import 'healthy menu/DetailPage2.dart';
-import 'ItalianMenu.dart';
+import 'healthy menu/DetailPage2.dart';
+import 'mexican menu/Detailpage20.dart';
+import 'mexican menu/Detailpage21.dart';
 
-class Menu extends StatefulWidget {
-  const Menu({Key? key}) : super(key: key);
+class MexicanMenu extends StatefulWidget {
+  const MexicanMenu({Key? key}) : super(key: key);
 
   @override
-  State<Menu> createState() => _MenuState();
+  State<MexicanMenu> createState() => _MenuState();
 }
 
-class _MenuState extends State<Menu> {
+class _MenuState extends State<MexicanMenu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,19 +74,19 @@ class _MenuState extends State<Menu> {
                   child: ListView(
                 children: <Widget>[
                   buildItem(
-                      "Joe's Linder",
-                      "176 reviews = S. Oxford 13th",
-                      "https://images.pexels.com/photos/3676531/pexels-photo-3676531.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+                      "Oaxacan Red Chile Enchiladas",
+                      "159 reviews = S. Oxford 13th",
+                      "https://media.istockphoto.com/photos/chicken-filled-green-enchiladas-traditional-mexican-meal-picture-id1217896132?b=1&k=20&m=1217896132&s=612x612&w=0&h=GfWI_bEjIH5-ML0MlK7Zyztcol3d2q8E8C5YEV_W_LM=",
                       4.5),
                   buildItem1(
-                      "Mama's brunch",
-                      "154 reviews = S. Gulier 6th",
-                      "https://images.pexels.com/photos/1147993/pexels-photo-1147993.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-                      4.7),
+                      "Tacos al pastor",
+                      "88 reviews = S. Gulier 6th",
+                      "https://images.pexels.com/photos/4958773/pexels-photo-4958773.jpeg?auto=compress&cs=tinysrgb&w=400",
+                      4.5),
                   buildItem2(
-                      "Serzh's salad",
-                      "205 reviews = S. Oxford 13th",
-                      "https://images.pexels.com/photos/842571/pexels-photo-842571.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+                      "Chilaquiles",
+                      "230 reviews = S. Oxford 13th",
+                      "https://images.pexels.com/photos/10305696/pexels-photo-10305696.jpeg?auto=compress&cs=tinysrgb&w=400",
                       4.5),
                 ],
               )),
@@ -94,7 +101,7 @@ class _MenuState extends State<Menu> {
       String title, String subTitle, String url, double rating) {
     return GestureDetector(
       onTap: (){
-        Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => DetailPage()));
+        Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => DetailPage20()));
       },
           child: Container(
         margin: EdgeInsets.symmetric(vertical: 12.0),
@@ -168,7 +175,7 @@ class _MenuState extends State<Menu> {
       String title, String subTitle, String url, double rating) {
     return GestureDetector(
       onTap: (){
-        Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => DetailPage2()));
+        Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => DetailPage21()));
       },
           child: Container(
         margin: EdgeInsets.symmetric(vertical: 12.0),
@@ -242,7 +249,7 @@ class _MenuState extends State<Menu> {
       String title, String subTitle, String url, double rating) {
     return GestureDetector(
       onTap: (){
-        Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => DetailPage1()));
+        Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => DetailPage22()));
       },
           child: Container(
         margin: EdgeInsets.symmetric(vertical: 12.0),
@@ -314,7 +321,7 @@ class _MenuState extends State<Menu> {
   }
 
 
-Container buildTopChipHealth(String label, bool isActive) {
+  Container buildTopChipHealth(String label, bool isActive) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 5.0),
       child: ActionChip(
@@ -359,7 +366,8 @@ Container buildTopChipHealth(String label, bool isActive) {
       ),
     );
   }
-Container buildTopChipMexican(String label, bool isActive) {
+
+  Container buildTopChipMexican(String label, bool isActive) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 5.0),
       child: ActionChip(

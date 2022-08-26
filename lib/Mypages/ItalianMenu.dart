@@ -5,9 +5,12 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:restaurant_management_app/Mypages/healthy%20menu/DetailPage1.dart';
 
+import 'AsianMenu.dart';
 import 'Italian menu/DetailPage11.dart';
 import 'Italian menu/DetailPage12.dart';
 import 'Italian menu/Detailpage10.dart';
+import 'Menu.dart';
+import 'MexicanMenu.dart';
 import 'healthy menu/DetailPage.dart';
 import 'healthy menu/DetailPage2.dart';
 import 'healthy menu/DetailPage2.dart';
@@ -55,8 +58,8 @@ class _MenuState extends State<ItalianMenu> {
                       children: <Widget>[
                         buildTopChipHealth("healthy", true),
                         buildTopChipItaly("italian", true),
-                        buildTopChipHealth("mexican", true),
-                        buildTopChipHealth("asian", true),
+                        buildTopChipMexican("mexican", true),
+                        buildTopChipAsian("asian", true),
                       ],
                     ),
                   )
@@ -329,7 +332,7 @@ class _MenuState extends State<ItalianMenu> {
           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => ItalianMenu(),  ));
+                              builder: (context) => Menu(),  ));
         },
         backgroundColor: isActive ? Colors.orange : Colors.grey,
 
@@ -354,6 +357,50 @@ class _MenuState extends State<ItalianMenu> {
                             context,
                             MaterialPageRoute(
                               builder: (context) => ItalianMenu(),  ));
+        },
+        backgroundColor: isActive ? Colors.orange : Colors.grey,
+
+      ),
+    );
+  }
+
+  Container buildTopChipMexican(String label, bool isActive) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 5.0),
+      child: ActionChip(
+        padding: EdgeInsets.all(8.0),
+        label: Text(
+          label,
+          style: TextStyle(color: Colors.white, fontSize: 16.0,
+          ),
+        ),
+        onPressed: (){
+          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MexicanMenu(),  ));
+        },
+        backgroundColor: isActive ? Colors.orange : Colors.grey,
+
+      ),
+    );
+  }
+
+  Container buildTopChipAsian(String label, bool isActive) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 5.0),
+      child: ActionChip(
+        padding: EdgeInsets.all(8.0),
+        label: Text(
+          label,
+          style: TextStyle(color: Colors.white, fontSize: 16.0,
+          ),
+        ),
+        onPressed: (){
+          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => AsianMenu(),  ));
         },
         backgroundColor: isActive ? Colors.orange : Colors.grey,
 

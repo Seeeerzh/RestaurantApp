@@ -3,6 +3,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:restaurant_management_app/Mypages/Menu.dart';
 import 'package:restaurant_management_app/Mypages/Tablestatus.dart';
+import 'package:restaurant_management_app/widgets/adding_items.dart';
 
 import 'Mypages/Settings.dart';
 
@@ -76,7 +77,27 @@ class Sidemenu1 extends StatelessWidget {
                             );
                       },
                     ),),
-                    
+                    Card( child:ListTile(
+                      leading: Icon(
+                        Icons.table_bar,
+                        color: Colors.black,
+                      ),
+                      title: Text(
+                        "Adding Items in Menu",
+                        style: TextStyle(
+                          color: Colors.yellow,
+                        ),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Adding(),  
+                            )
+                            
+                            );
+                      },
+                    ),),
                     ],
 
         )),

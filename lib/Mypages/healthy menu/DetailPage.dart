@@ -16,7 +16,7 @@ class _DetailPageState extends State<DetailPage> {
       floatingActionButton: Chip(
           backgroundColor: Colors.orange,
           padding: EdgeInsets.fromLTRB(55, 12, 55, 12),
-          label: Text("book now",
+          label: Text("book now from Table status",
               style: TextStyle(
                   fontSize: 18.0,
                   fontWeight: FontWeight.bold,
@@ -162,7 +162,7 @@ class _DetailPageState extends State<DetailPage> {
               Container(
                 width: MediaQuery.of(context).size.width - 150,
                 child: Text(
-                  "You can see it from picture",
+                  "eggs, fried bacon, mushrooms, fresh vegetables and cheese",
                   style: TextStyle(
                     fontSize: 14.0,
                     fontWeight: FontWeight.bold,

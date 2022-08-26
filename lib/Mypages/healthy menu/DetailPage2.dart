@@ -16,7 +16,7 @@ class _DetailPageState extends State<DetailPage2> {
       floatingActionButton: Chip(
           backgroundColor: Colors.orange,
           padding: EdgeInsets.fromLTRB(55, 12, 55, 12),
-          label: Text("book now",
+          label: Text("book now from Table status",
               style: TextStyle(
                   fontSize: 18.0,
                   fontWeight: FontWeight.bold,
@@ -62,7 +62,7 @@ class _DetailPageState extends State<DetailPage2> {
                   borderRadius: BorderRadius.circular(20.0)),
               alignment: Alignment.center,
               child: Text(
-                "4.5",
+                "4.7",
                 style: TextStyle(fontSize: 16.0, color: Colors.white),
               ),
             ),
@@ -80,7 +80,7 @@ class _DetailPageState extends State<DetailPage2> {
                       BoxShadow(color: Colors.black.withOpacity(0.2))
                     ]),
                     child: Text(
-                      "176 reviews",
+                      "154 reviews",
                       style: TextStyle(fontSize: 16.0, color: Colors.white),
                     ),
                   ),
@@ -162,7 +162,7 @@ class _DetailPageState extends State<DetailPage2> {
               Container(
                 width: MediaQuery.of(context).size.width - 150,
                 child: Text(
-                  "You can see it from picture",
+                  "Fresh fruits and berries, yougurt on your choice",
                   style: TextStyle(
                     fontSize: 14.0,
                     fontWeight: FontWeight.bold,

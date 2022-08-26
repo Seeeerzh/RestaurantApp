@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class DetailPage1 extends StatefulWidget {
+class DetailPage20 extends StatefulWidget {
    
   
   @override
   _DetailPageState createState() => _DetailPageState();
 }
 
-class _DetailPageState extends State<DetailPage1> {
-  static const String url ='https://images.pexels.com/photos/842571/pexels-photo-842571.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260';
+class _DetailPageState extends State<DetailPage20> {
+  static const String url = 'https://media.istockphoto.com/photos/chicken-filled-green-enchiladas-traditional-mexican-meal-picture-id1217896132?b=1&k=20&m=1217896132&s=612x612&w=0&h=GfWI_bEjIH5-ML0MlK7Zyztcol3d2q8E8C5YEV_W_LM=';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +16,7 @@ class _DetailPageState extends State<DetailPage1> {
       floatingActionButton: Chip(
           backgroundColor: Colors.orange,
           padding: EdgeInsets.fromLTRB(55, 12, 55, 12),
-          label: Text("book now from Table status",
+          label: Text("book now from Table Status",
               style: TextStyle(
                   fontSize: 18.0,
                   fontWeight: FontWeight.bold,
@@ -80,7 +80,7 @@ class _DetailPageState extends State<DetailPage1> {
                       BoxShadow(color: Colors.black.withOpacity(0.2))
                     ]),
                     child: Text(
-                      "205 reviews",
+                      "176 reviews",
                       style: TextStyle(fontSize: 16.0, color: Colors.white),
                     ),
                   ),
@@ -88,7 +88,7 @@ class _DetailPageState extends State<DetailPage1> {
                     height: 10.0,
                   ),
                   Text(
-                    "Perfect breakfast directly from Greece",
+                    "Oaxacan Red Chile Enchiladas",
                     style: TextStyle(
                         fontSize: 50.0,
                         fontWeight: FontWeight.bold,
@@ -138,7 +138,7 @@ class _DetailPageState extends State<DetailPage1> {
               image: DecorationImage(
                 fit: BoxFit.cover,
                 image: NetworkImage(
-                    "https://images.pexels.com/photos/842571/pexels-photo-842571.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" ),
+                    "https://media.istockphoto.com/photos/chicken-filled-green-enchiladas-traditional-mexican-meal-picture-id1217896132?b=1&k=20&m=1217896132&s=612x612&w=0&h=GfWI_bEjIH5-ML0MlK7Zyztcol3d2q8E8C5YEV_W_LM="),
               ),
             ),
           ),
@@ -162,7 +162,7 @@ class _DetailPageState extends State<DetailPage1> {
               Container(
                 width: MediaQuery.of(context).size.width - 150,
                 child: Text(
-                  "Salad leaves, cherri tomatoes, cheese, fried chicken(sliced), Caesar topping",
+                  "dried guajillo chiles, garlic, plum tomatoes, serrano chiles, onions, corn tortillas, shredded cooked chicken  ",
                   style: TextStyle(
                     fontSize: 14.0,
                     fontWeight: FontWeight.bold,
