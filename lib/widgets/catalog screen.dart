@@ -20,9 +20,10 @@ class CatalogScreen extends StatelessWidget {
        
        ),),
       body: SafeArea(child: Column(
+        
         children: [
           CatalogProducts(),
-          ElevatedButton(//onPressed: () => Get.to (()=>CartScreen()), 
+          ElevatedButton( 
           onPressed: () {
                 Navigator.push(context,
                         MaterialPageRoute(builder: (context) => CartScreen()))

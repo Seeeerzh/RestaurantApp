@@ -16,35 +16,30 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Your cart"),),
-      body: Column(
-        children: [
-          CartProducts(),
-          CartTotal(),
-          ElevatedButton(
-                        //onPressed: () {
-                         // click = !click ;
-                          //Navigator.push(context, MaterialPageRoute(builder: (context)=>TableStatus(),));
-                        //},
-                        onPressed: () {
-              click = !click;
-              /*Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => TableStatus(),
-                  ));*/
-              Navigator.of(context).pop(click);
-            },
-                        style: ElevatedButton.styleFrom(
-                            elevation: 5,
-                            primary: Colors.lime,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30),
-                            )),
-                        child: const SizedBox(
-                            width: 100, child: Center(child: Text("Reserve"))),
-                      ),
-        ],
-        
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            CartProducts(),
+            CartTotal(),
+            ElevatedButton(
+                          
+                          onPressed: () {
+                click = !click;
+               
+                Navigator.of(context).pop(click);
+              },
+                          style: ElevatedButton.styleFrom(
+                              elevation: 5,
+                              primary: Colors.lime,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              )),
+                          child: const SizedBox(
+                              width: 100, child: Center(child: Text("Reserve"))),
+                        ),
+          ],
+          
+        ),
       ),
     );
   }
